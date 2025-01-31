@@ -1,22 +1,34 @@
-import Image from "next/image"
+import Image from "next/image";
 
-
-export default function home () {
+export default function Home() {
   return (
-    <div className="bg-orange-400 w-full h-screen">
-      <div className="flex flex-raw justify-center p-8 lg:items-start">
-        <div className="text-xl sm:text-xl md:text-xl text-center p-20 h-[530px] w-[500px] bg-slate-300">
-            <h1 className="font-bold text-2xl">Find a gift for your wife or your loved ones</h1>
-            <p className="mt-8 pt-2 pb-2">Struggling to find a gift for your wife or your loved ones? <span className="font-bold">No Problem!</span></p>
-            <button className="font-bold mt-8 p-4 border bg-orange-400  hover:bg-slate-500">Find Gift Now</button>
+    <div className="bg-orange-400 w-full min-h-screen flex justify-center items-center p-4">
+      <div className="flex flex-wrap justify-center items-center gap-4 max-w-6xl w-full">
+        {/* Text Content */}
+        <div className="text-xl text-center p-8 sm:p-12 bg-slate-300 max-w-md w-full">
+          <h1 className="font-bold text-2xl sm:text-3xl">
+            Find a gift for your wife or your loved ones
+          </h1>
+          <p className="mt-6 sm:mt-8">
+            Struggling to find a gift for your wife or your loved ones?{" "}
+            <span className="font-bold">No Problem!</span>
+          </p>
+          <button className="font-bold mt-6 sm:mt-8 p-4 border bg-orange-400 hover:bg-slate-500 w-full">
+            Find Gift Now
+          </button>
         </div>
-        <div className="">
-            <Image src="/pic1.png" alt="picture" width={0} height={0} className="flex justify-around items-center w-[550px] h-[600px]:" sizes="100%" />
+
+        {/* Image Section */}
+        <div className="flex justify-center w-full max-w-md">
+          <Image
+            src="/pic1.png"
+            alt="picture"
+            width={500}
+            height={600}
+            className="w-full h-auto object-cover"
+          />
         </div>
       </div>
-      </div>
-  )
+    </div>
+  );
 }
-
-
- 
